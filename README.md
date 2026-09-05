@@ -1,44 +1,57 @@
-# Student Management System - Spring Boot + MySQL
+# Student Management System
 
-This is a simple Student Management CRUD application built using:
-- Spring Boot 3.2.7
+A RESTful Student Management System built using Spring Boot, Spring Data JPA, Hibernate, and MySQL.
+
+## Tech Stack
+
 - Java 17
-- MySQL Database
+- Spring Boot 3.5.5
 - Spring Data JPA
-- RESTful API Architecture
+- Hibernate
+- MySQL
+- REST API
+- Swagger / OpenAPI
+- Maven
 
 ## Features
-✔ Add new students  
-✔ Get list of all students  
-✔ Get single student by ID  
-✔ Update student details  
-✔ Delete student  
-✔ Auto table creation using Hibernate
+
+- Create new student records
+- Get all students with pagination
+- Get student by ID
+- Update student details
+- Delete student records
+- Search students by name
+- Search students by course
+- Input validation
+- Duplicate email checking
+- Global exception handling
+- Automatic database table creation using Hibernate
+- Interactive API documentation using Swagger / OpenAPI
 
 ## Project Structure
-- `entity` → Student model
-- `repository` → JPA repository
-- `service` → Business logic
-- `controller` → REST API endpoints
 
-## API Endpoints
-
-### Add Student
-`POST /students`
-
-### Get All Students
-`GET /students`
-
-### Get Student By ID
-`GET /students/{id}`
-
-### Update Student
-`PUT /students/{id}`
-
-### Delete Student
-`DELETE /students/{id}`
-
-## How to Run
-1. Install MySQL and create database:
-   ```sql
-   CREATE DATABASE studentdb;
+```text
+src/main/java/com/example/studentmanagement
+│
+├── controller
+│   └── StudentController.java
+│
+├── dto
+│   ├── StudentRequestDTO.java
+│   └── StudentResponseDTO.java
+│
+├── entity
+│   └── Student.java
+│
+├── exception
+│   ├── DuplicateEmailException.java
+│   ├── StudentNotFoundException.java
+│   └── GlobalExceptionHandler.java
+│
+├── repository
+│   └── StudentRepository.java
+│
+├── service
+│   └── StudentService.java
+│
+└── StudentManagementApplication.java
