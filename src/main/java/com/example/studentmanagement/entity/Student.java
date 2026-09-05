@@ -1,27 +1,36 @@
-package com.example.demo.dto;
+package com.example.studentmanagement.entity;
 
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
+import jakarta.persistence.*;
 
-public class StudentRequestDTO {
+@Entity
+@Table(name = "students")
+public class Student {
 
-    @NotBlank(message = "Name is required")
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private String name;
 
-    @NotBlank(message = "Email is required")
-    @Email(message = "Invalid email format")
     private String email;
 
-    @NotBlank(message = "Course is required")
     private String course;
 
-    public StudentRequestDTO() {
+    public Student() {
     }
 
-    public StudentRequestDTO(String name, String email, String course) {
+    public Student(String name, String email, String course) {
         this.name = name;
         this.email = email;
         this.course = course;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {

@@ -1,28 +1,27 @@
-package com.example.demo.dto;
+package com.example.studentmanagement.dto;
 
-public class StudentResponseDTO {
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 
-    private Long id;
+public class StudentRequestDTO {
+
+    @NotBlank(message = "Name is required")
     private String name;
+
+    @NotBlank(message = "Email is required")
+    @Email(message = "Invalid email format")
     private String email;
+
+    @NotBlank(message = "Course is required")
     private String course;
 
-    public StudentResponseDTO() {
+    public StudentRequestDTO() {
     }
 
-    public StudentResponseDTO(Long id, String name, String email, String course) {
-        this.id = id;
+    public StudentRequestDTO(String name, String email, String course) {
         this.name = name;
         this.email = email;
         this.course = course;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getName() {

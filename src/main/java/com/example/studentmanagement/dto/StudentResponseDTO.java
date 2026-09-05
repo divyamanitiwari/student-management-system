@@ -1,25 +1,17 @@
-package com.example.demo.entity;
+package com.example.studentmanagement.dto;
 
-import jakarta.persistence.*;
+public class StudentResponseDTO {
 
-@Entity
-@Table(name = "students")
-public class Student {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String name;
-
     private String email;
-
     private String course;
 
-    public Student() {
+    public StudentResponseDTO() {
     }
 
-    public Student(String name, String email, String course) {
+    public StudentResponseDTO(Long id, String name, String email, String course) {
+        this.id = id;
         this.name = name;
         this.email = email;
         this.course = course;

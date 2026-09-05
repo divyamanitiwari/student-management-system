@@ -13,10 +13,10 @@
     </parent>
 
     <groupId>com.example</groupId>
-    <artifactId>demo</artifactId>
+    <artifactId>student-management-system</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <name>demo</name>
+    <name>student-management-system</name>
     <description>Student Management System</description>
 
     <properties>

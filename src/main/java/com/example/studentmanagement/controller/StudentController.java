@@ -1,7 +1,7 @@
-package com.example.demo.controller;
+package com.example.studentmanagement.controller;
 
-import com.example.demo.entity.Student;
-import com.example.demo.service.StudentService;
+import com.example.studentmanagement.entity.Student;
+import com.example.studentmanagement.service.StudentService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;

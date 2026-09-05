@@ -1,9 +1,9 @@
-package com.example.demo.service;
+package com.example.studentmanagement.service;
 
-import com.example.demo.exception.DuplicateEmailException;
-import com.example.demo.exception.StudentNotFoundException;
-import com.example.demo.entity.Student;
-import com.example.demo.repository.StudentRepository;
+import com.example.studentmanagement.exception.DuplicateEmailException;
+import com.example.studentmanagement.exception.StudentNotFoundException;
+import com.example.studentmanagement.entity.Student;
+import com.example.studentmanagement.repository.StudentRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
